@@ -1,8 +1,6 @@
 
-//Current Issues 2019-01-05
-//Not all gifs are animated upon clicking. Only the oddly numbered gifs get animated and the even numbers do not. "<src>" and data-state are not changing from "still" upon clicking. Is my "this" not working?
-//When "else" is removed from the if/else statement, all of the images animate. Inability to still gifs is now the problem.
 
+$(document).ready(function (){
 
 // Initial array of cartoon characters
 var topics = ["Mickey Mouse", "Homer Simpson", "Dennis the Menace", "Spider-Man"];
@@ -58,10 +56,12 @@ function displayCartoonCharacter() {
             // Prependng the cartoonDiv to the HTML page in the "#cartoons-view" div
             $("#cartoons-view").prepend(cartoonDiv);
 
+        }
 
-            //Make the cartoons move upon clicking on it!
-            $(".gif").on("click", function() {
+             //Make the cartoons move upon clicking on it!
+             $(".gif").on("click", function() {
                 var state = $(this).attr("data-state");
+                console.log(this);
                 // If the clicked image's state is still, update its src attribute to what its data-animate value is.
                 // Then, set the image's data-state to animate
                 // Else set src to the data-still value
@@ -75,9 +75,10 @@ function displayCartoonCharacter() {
               
             });
 
-        }
     });    
 };
+
+           
 
 // Function for displaying gifs
 function renderButtons() {
@@ -127,3 +128,4 @@ $(document).on("click", ".cartoon", displayCartoonCharacter);
 // Calling the renderButtons function to display the initial buttons
 renderButtons();
 
+});
