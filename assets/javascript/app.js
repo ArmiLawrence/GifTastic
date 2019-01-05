@@ -1,5 +1,3 @@
-
-
 $(document).ready(function (){
 
 // Initial array of cartoon characters
