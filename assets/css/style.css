@@ -1,0 +1,20 @@
+/* Body of the Page - all htmls*/
+
+html, body{
+    background-color: cadetblue;
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+    margin: 0px;
+  
+}
+
+button,
+
+div,
+
+form,
+
+input {
+      margin: 10px;
+    }
